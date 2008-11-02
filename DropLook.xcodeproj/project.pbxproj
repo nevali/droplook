@@ -11,11 +11,31 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		CD6A74C30EAFC8F6005C52D2 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6A74C20EAFC8F6005C52D2 /* Preferences.xib */; };
+		CD8A19690EB3B1F500E4B413 /* DropLook.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD8A19680EB3B1F500E4B413 /* DropLook.strings */; };
+		CDABDA1E0EAFA8FA006865AF /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CDABDA1D0EAFA8FA006865AF /* Sparkle.framework */; };
+		CDABDA260EAFAABD006865AF /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = CDABDA250EAFAABD006865AF /* dsa_pub.pem */; };
+		CDABDA450EAFAC3E006865AF /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDABDA1D0EAFA8FA006865AF /* Sparkle.framework */; };
+		CDABDA620EAFC423006865AF /* PrefsController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDABDA610EAFC423006865AF /* PrefsController.m */; };
 		CDD4A1C10EAD138300106582 /* DropAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD4A1C00EAD138300106582 /* DropAppDelegate.m */; };
 		CDD4A25C0EAD39C000106582 /* DropWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD4A25B0EAD39C000106582 /* DropWindow.xib */; };
 		CDD4A2600EAD3A7D00106582 /* DropWinController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD4A25F0EAD3A7D00106582 /* DropWinController.m */; };
 		CDD4A2E80EAD4E8D00106582 /* appicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = CDD4A2E70EAD4E8D00106582 /* appicon.icns */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CDABDA3A0EAFABF2006865AF /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CDABDA1E0EAFA8FA006865AF /* Sparkle.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -28,6 +48,12 @@
 		32CA4F630368D1EE00C91783 /* DropLook_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropLook_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* DropLook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropLook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6A74C20EAFC8F6005C52D2 /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		CD8A19640EB3B19500E4B413 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/DropLook.strings; sourceTree = "<group>"; };
+		CDABDA1D0EAFA8FA006865AF /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		CDABDA250EAFAABD006865AF /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
+		CDABDA600EAFC423006865AF /* PrefsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefsController.h; sourceTree = "<group>"; };
+		CDABDA610EAFC423006865AF /* PrefsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefsController.m; sourceTree = "<group>"; };
 		CDD4A1BF0EAD138300106582 /* DropAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropAppDelegate.h; sourceTree = "<group>"; };
 		CDD4A1C00EAD138300106582 /* DropAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropAppDelegate.m; sourceTree = "<group>"; };
 		CDD4A25B0EAD39C000106582 /* DropWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropWindow.xib; sourceTree = "<group>"; };
@@ -41,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDABDA450EAFAC3E006865AF /* Sparkle.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +82,8 @@
 				CDD4A1C00EAD138300106582 /* DropAppDelegate.m */,
 				CDD4A25E0EAD3A7D00106582 /* DropWinController.h */,
 				CDD4A25F0EAD3A7D00106582 /* DropWinController.m */,
+				CDABDA600EAFC423006865AF /* PrefsController.h */,
+				CDABDA610EAFC423006865AF /* PrefsController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -62,6 +91,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDABDA1D0EAFA8FA006865AF /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -109,11 +139,14 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CDABDA250EAFAABD006865AF /* dsa_pub.pem */,
 				CDD4A2E70EAD4E8D00106582 /* appicon.icns */,
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				CDD4A25B0EAD39C000106582 /* DropWindow.xib */,
+				CD6A74C20EAFC8F6005C52D2 /* Preferences.xib */,
+				CD8A19680EB3B1F500E4B413 /* DropLook.strings */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -137,6 +170,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				CDABDA3A0EAFABF2006865AF /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,6 +208,9 @@
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				CDD4A25C0EAD39C000106582 /* DropWindow.xib in Resources */,
 				CDD4A2E80EAD4E8D00106582 /* appicon.icns in Resources */,
+				CDABDA260EAFAABD006865AF /* dsa_pub.pem in Resources */,
+				CD6A74C30EAFC8F6005C52D2 /* Preferences.xib in Resources */,
+				CD8A19690EB3B1F500E4B413 /* DropLook.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +224,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				CDD4A1C10EAD138300106582 /* DropAppDelegate.m in Sources */,
 				CDD4A2600EAD3A7D00106582 /* DropWinController.m in Sources */,
+				CDABDA620EAFC423006865AF /* PrefsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +247,14 @@
 			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
+		CD8A19680EB3B1F500E4B413 /* DropLook.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD8A19640EB3B19500E4B413 /* English */,
+			);
+			name = DropLook.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -217,6 +263,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -234,6 +284,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = DropLook_Prefix.pch;

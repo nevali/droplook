@@ -32,11 +32,16 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface DropAppDelegate : NSObject
+@interface DropAppDelegate : NSObject {
+	@private int quickLookAvailable;
+	IBOutlet id prefsController;
+}
 -(void)lookAtFile:(NSString *)path;
 
 -(void)lookAtIt:(NSPasteboard *)pboard userData:(NSString *)userData error:(NSString **)error;
-- (BOOL)application:(NSApplication *)sender openFile:(NSString *)path;
+-(BOOL)application:(NSApplication *)sender openFile:(NSString *)path;
+
+-(IBAction)showPreferences:(id)sender;
 @end
 
 @interface DropAppDelegate(NSApplicationNotifications)

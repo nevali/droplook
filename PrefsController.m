@@ -34,34 +34,58 @@
 # include "config.h"
 #endif
 
-#import "DropWinController.h"
+#import "Sparkle/SUUpdater.h"
+#import "PrefsController.h"
 
-#define QLPreviewPanel NSClassFromString(@"QLPreviewPanel")
-#define QLPreviewView NSClassFromString(@"QLPreviewView")
 
-@implementation DropWinController
+@implementation PrefsController
 
--(id)initWithPath:(NSString *)path
+- (NSWindow *)window
 {
-	id qlpanel;
+	return window;
+}
+
+- (void)awakeFromNib
+{
+	updater = [SUUpdater sharedUpdater];
+	updateDateFormatter = [[NSDateFormatter alloc] init];
+	[updateDateFormatter setDateStyle:NSDateFormatterLongStyle];
+	[updateDateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+	lastCheckedString = NSLocalizedStringFromTable(@"Last checked for updates: %@", @"DropLook", @"Message displayed in preferences window showing last software update check.");
+	updateInProgressString = NSLocalizedStringFromTable(@"Checking for updates", @"DropLook", @"Message displayed in preferences window showing that an update is in progress.");
+	neverCheckedString = NSLocalizedStringFromTable(@"Never checked for updates.", @"DropLook", @"Message displayed in preferences window showing that automatic updates haven't yet run.");
+	[self showLastUpdated];
+	[NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(timerTick:) userInfo:NULL repeats:YES];
 	
-	self = [super init];
-	if(self)
+}
+
+- (IBAction)checkNow:(id)sender
+{
+	[updater checkForUpdatesInBackground];
+	[self showLastUpdated];
+}
+
+- (void)timerTick:(NSTimer*)theTimer
+{
+	[self showLastUpdated];
+}
+
+- (void)showLastUpdated
+{
+	NSDate *dt;
+	
+	if([updater updateInProgress])
 	{
-		if(YES != [NSBundle loadNibNamed:@"DropWindow.nib" owner:self])
-		{
-			NSLog(@"Failed to load DropWindow.nib");
-			[self dealloc];
-			return nil;
-		}
-		qlpanel = [QLPreviewView alloc];
-		[window setTitleWithRepresentedFilename:path];
-		[qlpanel initWithFrame:[window frame]];
-		[qlpanel setURL:[NSURL fileURLWithPath:path]];
-		[window setContentView: qlpanel];
-		[window makeKeyAndOrderFront:self];
+		[lastUpdated setStringValue:updateInProgressString];
 	}
-	return self;
+	else if(dt = [updater lastUpdateCheckDate])
+	{
+		[lastUpdated setStringValue:[NSString stringWithFormat:lastCheckedString, [updateDateFormatter stringFromDate:dt]]];
+	}
+	else
+	{
+		[lastUpdated setStringValue:neverCheckedString];
+	}
 }
 
 @end

@@ -30,38 +30,22 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifdef HAVE_CONFIG_H
-# include "config.h"
-#endif
+#import <Cocoa/Cocoa.h>
 
-#import "DropWinController.h"
+@interface PrefsController : NSObject {
+	IBOutlet id window;
+	IBOutlet id shouldAutoUpdate;
+	IBOutlet id lastUpdated;
 
-#define QLPreviewPanel NSClassFromString(@"QLPreviewPanel")
-#define QLPreviewView NSClassFromString(@"QLPreviewView")
-
-@implementation DropWinController
-
--(id)initWithPath:(NSString *)path
-{
-	id qlpanel;
+	SUUpdater *updater;
+	NSDateFormatter *updateDateFormatter;
 	
-	self = [super init];
-	if(self)
-	{
-		if(YES != [NSBundle loadNibNamed:@"DropWindow.nib" owner:self])
-		{
-			NSLog(@"Failed to load DropWindow.nib");
-			[self dealloc];
-			return nil;
-		}
-		qlpanel = [QLPreviewView alloc];
-		[window setTitleWithRepresentedFilename:path];
-		[qlpanel initWithFrame:[window frame]];
-		[qlpanel setURL:[NSURL fileURLWithPath:path]];
-		[window setContentView: qlpanel];
-		[window makeKeyAndOrderFront:self];
-	}
-	return self;
+	NSString *lastCheckedString;
+	NSString *updateInProgressString;
+	NSString *neverCheckedString;
 }
+-(NSWindow *)window;
+-(IBAction)checkNow:(id)sender;
 
+- (void)showLastUpdated;
 @end

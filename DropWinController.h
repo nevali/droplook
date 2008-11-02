@@ -34,7 +34,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface DropWinController : NSObject {
-	id window;
+	IBOutlet id window;
 }
 -(id)initWithPath:(NSString *)path;
 @end

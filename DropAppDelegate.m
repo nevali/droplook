@@ -39,13 +39,39 @@
 
 
 @implementation DropAppDelegate
--(void)lookAtFile:(NSString *)path {
+
+-(IBAction)showPreferences:(id)sender
+{
+	if(!prefsController)
+	{
+		[NSBundle loadNibNamed:@"Preferences.nib" owner:self];
+	}
+	[[prefsController window] makeKeyAndOrderFront:sender];
+}
+
+-(void)initQuickLook
+{
+	if(!quickLookAvailable)
+	{
+		quickLookAvailable = [[NSBundle bundleWithPath:@"/System/Library/PrivateFrameworks/QuickLookUI.framework"] load];
+		if(!quickLookAvailable)
+		{
+			NSLog(@"QuickLook is not available");
+			exit(1);
+		}
+	}
+}
+
+-(void)lookAtFile:(NSString *)path
+{
+	[self initQuickLook];
 	[[DropWinController alloc] initWithPath:path];
 }
 
 -(void)lookAtIt:(NSPasteboard *)pboard
 	   userData:(NSString *)userData
-		  error:(NSString **)error {
+		  error:(NSString **)error
+{
 	NSArray *flist;
 	unsigned int count, c;
 	NSString *path;
@@ -69,14 +95,7 @@
 
 @implementation DropAppDelegate(NSApplicationNotifications)
 -(void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	int quickLookAvailable;
-	
-	quickLookAvailable = [[NSBundle bundleWithPath:@"/System/Library/PrivateFrameworks/QuickLookUI.framework"] load];
-	if(!quickLookAvailable)
-	{
-		NSLog(@"QuickLook is not available");
-		exit(1);
-	}
+	[self initQuickLook];
     [NSApp setServicesProvider:self];
 }
 @end

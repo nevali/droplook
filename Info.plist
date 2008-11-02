@@ -9,7 +9,7 @@
 	<key>CFBundleIconFile</key>
 	<string>appicon.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.nevali.DropLook</string>
+	<string>com.jazzio.labs.DropLook</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleDocumentTypes</key>
@@ -36,7 +36,11 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.0.1</string>
+	<key>CFBundleDisplayName</key>
+	<string>DropLook</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2008 Mo McRoberts.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
@@ -57,5 +61,9 @@
 			</dict>
 		</dict>
 	</array>
+	<key>SUPublicDSAKeyFile</key>
+	<string>dsa_pub.pem</string>
+	<key>SUFeedURL</key>
+	<string>http://labs.jazzio.com/DropLook/appcast</string>
 </dict>
 </plist>
