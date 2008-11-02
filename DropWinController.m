@@ -43,7 +43,8 @@
 
 -(id)initWithPath:(NSString *)path
 {
-	id qlpanel;
+	NSURL *u;
+	NSDocumentController *sharedDocs;
 	
 	self = [super init];
 	if(self)
@@ -54,14 +55,34 @@
 			[self dealloc];
 			return nil;
 		}
+		u = [NSURL fileURLWithPath:path];
+		/* QLPreviewView doesn't appear to retain this URL, so we do this on
+		 * its behalf.
+		 */
+		[u retain];
 		qlpanel = [QLPreviewView alloc];
 		[window setTitleWithRepresentedFilename:path];
+		[window center];
 		[qlpanel initWithFrame:[window frame]];
-		[qlpanel setURL:[NSURL fileURLWithPath:path]];
 		[window setContentView: qlpanel];
+		[qlpanel setURL:u];
+		sharedDocs = [NSDocumentController sharedDocumentController];
+		[sharedDocs noteNewRecentDocumentURL:u];
+		[u release];
+		[qlpanel release];
 		[window makeKeyAndOrderFront:self];
 	}
 	return self;
+}
+
+- (void)windowWillClose:(NSNotification *)notification
+{
+	[self dealloc];
+}
+
+-(IBAction)closeWindow:(id)sender
+{
+	[window close];
 }
 
 @end

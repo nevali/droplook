@@ -35,6 +35,9 @@
 
 @interface DropWinController : NSObject {
 	IBOutlet id window;
+	id qlpanel;
 }
 -(id)initWithPath:(NSString *)path;
+-(void)windowWillClose:(NSNotification *)notification;
+-(IBAction)closeWindow:(id)sender;
 @end

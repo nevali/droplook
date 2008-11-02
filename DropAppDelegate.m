@@ -95,7 +95,6 @@
 
 @implementation DropAppDelegate(NSApplicationNotifications)
 -(void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	[self initQuickLook];
     [NSApp setServicesProvider:self];
 }
 @end
