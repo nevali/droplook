@@ -11,6 +11,7 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		CD403B600EB7B13300157951 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CD403B5F0EB7B13300157951 /* Credits.rtf */; };
 		CD6A74C30EAFC8F6005C52D2 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6A74C20EAFC8F6005C52D2 /* Preferences.xib */; };
 		CD8A19690EB3B1F500E4B413 /* DropLook.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD8A19680EB3B1F500E4B413 /* DropLook.strings */; };
 		CDABDA1E0EAFA8FA006865AF /* Sparkle.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = CDABDA1D0EAFA8FA006865AF /* Sparkle.framework */; };
@@ -48,6 +49,7 @@
 		32CA4F630368D1EE00C91783 /* DropLook_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropLook_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* DropLook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropLook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD403B5D0EB7B12C00157951 /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		CD6A74C20EAFC8F6005C52D2 /* Preferences.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		CD8A19640EB3B19500E4B413 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/DropLook.strings; sourceTree = "<group>"; };
 		CDABDA1D0EAFA8FA006865AF /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				CDD4A25B0EAD39C000106582 /* DropWindow.xib */,
 				CD6A74C20EAFC8F6005C52D2 /* Preferences.xib */,
 				CD8A19680EB3B1F500E4B413 /* DropLook.strings */,
+				CD403B5F0EB7B13300157951 /* Credits.rtf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				CDABDA260EAFAABD006865AF /* dsa_pub.pem in Resources */,
 				CD6A74C30EAFC8F6005C52D2 /* Preferences.xib in Resources */,
 				CD8A19690EB3B1F500E4B413 /* DropLook.strings in Resources */,
+				CD403B600EB7B13300157951 /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +249,14 @@
 				1DDD58150DA1D0A300B32029 /* English */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		CD403B5F0EB7B13300157951 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD403B5D0EB7B12C00157951 /* English */,
+			);
+			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 		CD8A19680EB3B1F500E4B413 /* DropLook.strings */ = {
