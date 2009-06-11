@@ -22,6 +22,7 @@
 		CDD4A25C0EAD39C000106582 /* DropWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD4A25B0EAD39C000106582 /* DropWindow.xib */; };
 		CDD4A2600EAD3A7D00106582 /* DropWinController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD4A25F0EAD3A7D00106582 /* DropWinController.m */; };
 		CDD4A2E80EAD4E8D00106582 /* appicon.icns in Resources */ = {isa = PBXBuildFile; fileRef = CDD4A2E70EAD4E8D00106582 /* appicon.icns */; };
+		CDF5ACF30FE192E200AAB4D9 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF5ACF20FE192E200AAB4D9 /* Quartz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +63,7 @@
 		CDD4A25E0EAD3A7D00106582 /* DropWinController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropWinController.h; sourceTree = "<group>"; };
 		CDD4A25F0EAD3A7D00106582 /* DropWinController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropWinController.m; sourceTree = "<group>"; };
 		CDD4A2E70EAD4E8D00106582 /* appicon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = appicon.icns; sourceTree = "<group>"; };
+		CDF5ACF20FE192E200AAB4D9 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = /System/Library/Frameworks/Quartz.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 			files = (
 				CDABDA450EAFAC3E006865AF /* Sparkle.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				CDF5ACF30FE192E200AAB4D9 /* Quartz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +98,7 @@
 			children = (
 				CDABDA1D0EAFA8FA006865AF /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				CDF5ACF20FE192E200AAB4D9 /* Quartz.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";

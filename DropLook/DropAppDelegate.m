@@ -37,6 +37,7 @@
 #import "DropAppDelegate.h"
 #import "DropWinController.h"
 
+#define QLPreviewPanel NSClassFromString(@"QLPreviewPanel")
 
 @implementation DropAppDelegate
 
@@ -53,7 +54,14 @@
 {
 	if(!quickLookAvailable)
 	{
-		quickLookAvailable = [[NSBundle bundleWithPath:@"/System/Library/PrivateFrameworks/QuickLookUI.framework"] load];
+		if(QLPreviewPanel)
+		{
+			quickLookAvailable = 1;
+		}
+		else
+		{
+			quickLookAvailable = [[NSBundle bundleWithPath:@"/System/Library/PrivateFrameworks/QuickLookUI.framework"] load];
+		}
 		if(!quickLookAvailable)
 		{
 			NSLog(@"QuickLook is not available");
