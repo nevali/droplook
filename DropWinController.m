@@ -1,10 +1,9 @@
 /*
  * DropLook: A simple wrapper for QuickLook.
- * @(#) $Id$
  */
 
 /*
- * Copyright (c) 2008 Mo McRoberts.
+ * Copyright (c) 2008, 2009 Mo McRoberts.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -55,11 +54,7 @@
 			[self dealloc];
 			return nil;
 		}
-		u = [NSURL fileURLWithPath:path];
-		/* QLPreviewView doesn't appear to retain this URL, so we do this on
-		 * its behalf.
-		 */
-		[u retain];
+		u = [[NSURL alloc] initFileURLWithPath:path];
 		qlpanel = [QLPreviewView alloc];
 		[window setTitleWithRepresentedFilename:path];
 		[window center];

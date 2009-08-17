@@ -52,6 +52,8 @@
 
 -(void)initQuickLook
 {
+	NSAlert *alerter;
+	
 	if(!quickLookAvailable)
 	{
 		if(QLPreviewPanel)
@@ -64,7 +66,9 @@
 		}
 		if(!quickLookAvailable)
 		{
-			NSLog(@"QuickLook is not available");
+			alerter = [NSAlert alertWithMessageText:@"DropLook"  defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@"An error occurred while trying to initialise Quick Look. If you’re technically-minded, your Console may provide more detailed information."];
+			[alerter runModal];
+			[alerter release];
 			exit(1);
 		}
 	}
